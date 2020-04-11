@@ -29,6 +29,12 @@ public class SecondActivity extends AppCompatActivity {
                     int number2= Integer.parseInt(numEditText.getText().toString());
                     int result= number1+number2;
                     Log.d(Tag, result+"");
+
+                    Intent resultadoIntent= new Intent();
+                    resultadoIntent.putExtra("resultado", result);
+                    setResult(RESULT_OK, resultadoIntent);
+                    Log.d(Tag ,"devolvemos el resultado"+result);
+                    finish();
                 }
             }
         });
