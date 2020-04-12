@@ -27,6 +27,7 @@ public class SecondActivity extends AppCompatActivity {
                     Log.d(Tag,"Extra has value");
                     int number1= getIntent().getExtras().getInt("ExtraNumber");
                     int number2= Integer.parseInt(numEditText.getText().toString());
+                    Log.d(Tag,"number 2 es "+ number2);
                     int result= number1+number2;
                     Log.d(Tag, result+"");
 

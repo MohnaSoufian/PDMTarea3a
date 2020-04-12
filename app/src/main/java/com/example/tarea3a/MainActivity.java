@@ -38,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
             int respuesta = intentRespuesta.getExtras().getInt("resultado");
             Log.d(Tag, respuesta+"");
             resultTextView.setText(respuesta+"");
+
+            // Ahora compartir el resultado
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, respuesta+"");
+            sendIntent.setType("text/plain");
+            Log.d(Tag, "Starting Activity");
+            startActivity(sendIntent);
         }
     } // ()
 }
