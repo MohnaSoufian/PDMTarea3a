@@ -27,6 +27,19 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        // BUTTON para hacer un intento implicito a la segunda actividad
+        final Button implicitIntentBtn = (Button) findViewById(R.id.implicitIntentBtn);
+        implicitIntentBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent startImplicitIntent= new Intent("soufian.PRUEBA" );
+                startImplicitIntent.putExtra("ExtraNumber", 3);
+                startActivityForResult(startImplicitIntent, 1234);
+            }
+
+        });
+
 
     }
     @Override
